@@ -1,0 +1,198 @@
+# Blender MTL File: 'maou-new.blend'
+# Material Count: 18
+
+newmtl Material
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.001
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl arm-tex-dark-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/arm-tex-dark.png
+
+newmtl arm-tex-dark-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/arm-tex-dark.png
+
+newmtl asi-sita-tex-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/sita-asi-tex-dark.png
+
+newmtl asi-sita-tex-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/sita-asi-tex-dark.png
+
+newmtl head-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/head-tex-dark.png
+
+newmtl head-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/head-tex-dark.png
+
+newmtl head-sabu-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/sabu-head-tex-dark.png
+
+newmtl head-sabu-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/sabu-head-tex-dark.png
+
+newmtl karada-tate-tex-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/body-tate-tex-dark.png
+
+newmtl karada-tate-tex-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/body-tate-tex-dark.png
+
+newmtl kata-tate-tex-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/kata-tate-tex-dark.png
+
+newmtl kata-tate-tex-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/kata-tate-tex-dark.png
+
+newmtl kosi-tex-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/kosi-tex-dark.png
+
+newmtl kosi-tex-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/kosi-tex-dark.png
+
+newmtl ue-asi-tex-metal
+Ns 440.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/ue-asi-tex-dark.png
+
+newmtl ue-asi-tex-nomal
+Ns 225.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.236364
+illum 6
+map_Kd /Users/kitamuratakeru/Dropbox/おまえのせいでー/ue-asi-tex-dark.png

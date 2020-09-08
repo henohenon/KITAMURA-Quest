@@ -1,0 +1,15 @@
+{
+  "name": "node-js-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "henohenon <takeru_20n1100821@nnn.ed.jp>",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "^1.11.0"
+  },
+  "repository": "git@github.com:progedu/node-js-http-3016.git"
+}
