@@ -10,9 +10,15 @@ const server = http
 
     switch (req.method) {
       case 'GET':
-        const fs = require('fs');
-        const rs = fs.createReadStream('./buttle-scene.html');
-        rs.pipe(res);
+        if(req.url==="/buttle"){
+          const fs = require('fs');
+          const rs = fs.createReadStream('./buttle-scene.html');
+          rs.pipe(res);
+        }else if(req.url==="/home"){
+          const fs = require('fs');
+          const rs = fs.createReadStream('./home.html');
+          rs.pipe(res);
+        }
         break;
       case 'POST':
         let rawData = '';

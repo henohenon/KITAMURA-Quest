@@ -1,15 +1,19 @@
-<html>
-  <head>
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-assets>
-        <a-asset-item id="crate-obj" src="united.obj"></a-asset-item>
-        <a-asset-item id="crate-mtl" src="united.mtl"></a-asset-item>
-      </a-assets>
-      <a-obj-model position="0 0.5 -5" src="#crate-obj" mtl="#crate-mtl"></a-obj-model>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src = "https://aframe.io/releases/1.0.4/aframe.min.js" > </script>
+   <!-- aframe-extras読み込み -->
+   <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+  <a-scene> 
+    <a-assets> 
+      <a-asset-item id = "tree" src = "https://raw.githubusercontent.com/henoheTK/portfolio-remaster/master/maou.gltf" ></a-asset-item> 
+    </a-assets>
+    <a-entity id="maou" gltf-model = "#tree" animation-mixer="clip: kogeki"> </a-entity> 
+  </a-scene>
+</body>
 </html>
