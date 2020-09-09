@@ -18,8 +18,22 @@ const server = http
           const fs = require('fs');
           const rs = fs.createReadStream('./home.html');
           rs.pipe(res);
+        }else if(req.url==="/home.js"){
+          res.writeHead(200, {
+            'Content-Type': 'text/js; charset=utf-8'
+          });
+          const fs = require('fs');
+          const rs = fs.createReadStream('./home.js');
+          rs.pipe(res);
+        }else if(req.url==="/home.css"){
+          res.writeHead(200, {
+            'Content-Type': 'text/css; charset=utf-8'
+          });
+          const fs = require('fs');
+          const rs = fs.createReadStream('./home.css');
+          rs.pipe(res);
         }
-        break;
+      break;
       case 'POST':
         let rawData = '';
         req
