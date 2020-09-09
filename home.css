@@ -37,3 +37,4 @@ input[type="checkbox"]{
 input[type="checkbox"]:checked + #popup{
   display:block;
 }
+

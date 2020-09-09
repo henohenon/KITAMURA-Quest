@@ -11,9 +11,11 @@
 <body>
   <a-scene> 
     <a-assets> 
-      <a-asset-item id = "tree" src = "https://raw.githubusercontent.com/henoheTK/portfolio-remaster/master/maou.gltf" ></a-asset-item> 
+      <a-asset-item id = "maou" src = "https://raw.githubusercontent.com/henoheTK/portfolio-remaster/master/maou.gltf" ></a-asset-item> 
+      <a-asset-item id = "sinden" src = "https://raw.githubusercontent.com/henoheTK/portfolio-remaster/master/sinden.glb" ></a-asset-item> 
     </a-assets>
-    <a-entity id="maou" gltf-model = "#tree" animation-mixer="clip: kogeki"> </a-entity> 
+    <a-entity id="maou" gltf-model = "#maou" animation-mixer="clip: kogeki"> </a-entity> 
+    <a-entity id="maou" gltf-model = "#sinden"> </a-entity> 
   </a-scene>
 </body>
 </html>
