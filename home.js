@@ -6,6 +6,7 @@ const action_icons=document.getElementById("main-icons");
 const blender_button=document.getElementById("blender-button");
 const about_button=document.getElementById("about-button");
 const about_menue=document.getElementById("about-menue");
+const works_menue=document.getElementById("works-menue")
 var iframe = document.getElementById('id_ifrem');
 let tekiHP=1000;
 let mikataHP=200;
@@ -44,6 +45,7 @@ const hierarchys={
     "blender-button","unity-button","html-button"
   ],
   "works-button":[
+    "portfolio-button","game-button","-button"
   ],
 }
 
@@ -230,6 +232,38 @@ function skill_numb(id){
   return undefined;
 }
 
+for(let i=0;i<works_menue.children[0].childElementCount;i++){
+  let this_button=works_menue.children[0].children[i].children[0];
+  this_button.addEventListener("mouseover",{button:this_button,handleEvent:work_hover}, false);
+  this_button.addEventListener("click",{next:"action",handleEvent:ischangefade},false);
+}
+
+function work_hover(){
+  if(ischanging===false){
+    sound("move"); 
+    sellect_elem.classList.remove("hover");
+    this.button.classList.add('hover');
+
+    
+    sellect_elem.parentNode.children[1].classList.remove('fadein');
+    sellect_elem.parentNode.children[1].classList.add('fadeout');
+    sellect_elem.parentNode.children[1].style.display="none";
+    this.button.parentNode.children[1].classList.add('fadein');
+    this.button.parentNode.children[1].classList.remove('fadeout');
+    this.button.parentNode.children[1].style.display="block";
+    sellect_elem=this.button;
+    sellection_numb=work_numb(sellect_elem.id);
+  }
+}
+function work_numb(id){
+  for(let i=0;i<hierarchys["works-button"].length;i++){
+    if(hierarchys["works-button"][i]===id){
+      return i;
+    }
+  }
+  return undefined;
+}
+
 function action_buttons_fadeOut(select_numb){
   for(i=0;i<action_buttons.childElementCount;i++){
     if(i===select_numb){
@@ -273,6 +307,18 @@ function skills_fadeIn(){
   sellect_elem.parentNode.children[0].classList.add('hover');
   sellect_elem.parentNode.children[1].style.display="block";
 }
+function works_fadeIn(){
+  works_menue.style.display="block"
+  works_menue.classList.remove('fadeout');
+  works_menue.classList.add('fadein');
+
+  sellect_elem=works_menue.children[0].children[0].children[0];
+  sellection_numb=0;
+  select_hierarchy="works";
+  sellect_elem.parentNode.children[0].classList.add('hover');
+  sellect_elem.parentNode.children[1].style.display="block";
+}
+
 function abouts_fadeIn(){
   about_menue.style.display="block"
   about_menue.classList.remove('fadeout');
@@ -311,6 +357,19 @@ function skills_fadeOut(select_numb){
   },500);
 }
 
+function works_fadeOut(select_numb){
+  if(select_numb>0){
+    works_menue.children[0].children[select_numb];
+  }
+  works_menue.classList.remove('fadein');
+  works_menue.classList.add('fadeout');
+  setTimeout(function(){
+    works_menue.style.display="none"
+  },500);
+}
+
+
+
 function ischangefade(){
   if(ischanging===false){
     ischanging=true;
@@ -334,6 +393,9 @@ function fadechange(next_sellects){
     else if(sellection_numb===1){
       next_sellects="skills"
     }
+    else if(sellection_numb===2){
+      next_sellects="works"
+    }
   }
   console.log(next_sellects);
   if(select_hierarchy==="skills"&&skills.childElementCount>=sellect_elem){
@@ -343,10 +405,14 @@ function fadechange(next_sellects){
     case "skills":
       skills_fadeOut(sellection_numb);
       break;
+    case "works":
+      works_fadeOut();
+      break;
     case "action":
       action_buttons_fadeOut(sellection_numb);
       break;
     case "about":
+      console.log("ふぅむ")
       abouts_fadeOut(sellection_numb);
       break;
     }
@@ -354,10 +420,16 @@ function fadechange(next_sellects){
     case "skills":
       skills_fadeIn();
       break;
+    case "works":
+      works_fadeIn();
+      break;
     case "action":
       action_buttons_fadeIn();
+      break;
     case "about":
+      console.log("むふぅ")
       abouts_fadeIn();
+      break;
   }
   setTimeout(function(){
     ischanging=false;

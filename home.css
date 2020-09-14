@@ -163,6 +163,13 @@ ul{
   display: none;
   position: relative;
 }
+
+.works-menue{
+  display: none;
+  position: absolute;
+  transform: translate(0px,-800px);
+}
+
 .back-button{
   transform: translate(470px,350px);
   background-color: rgb(104, 104, 104);
@@ -240,7 +247,6 @@ ul{
 .teki-hp{
   transform: translate(-240px,-750px);
   width: 200%;
-
 }
 
 
