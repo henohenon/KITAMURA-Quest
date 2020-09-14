@@ -44,6 +44,19 @@
     opacity: 1;
   }
 }
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translate(0px,-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+
+
+
 
 
 html, body {
@@ -272,6 +285,12 @@ ul{
   animation : go-right 1s;
   animation-fill-mode: both;
 }
+.move-down{
+  animation: moveDown 1s;
+  animation-fill-mode: both;
+}
+
+
 
 
 .hover {

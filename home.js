@@ -12,7 +12,8 @@ let tekiHP=1000;
 let mikataHP=200;
 let mikataMP=100;
 
-const buttle=iframe.contentWindow.document.getElementById("sinden");
+const buttle=iframe.contentWindow.document.getElementById("buttle");
+console.log(iframe.contentWindow.document);
 
 const skill_param={
     "daiti-attack":{attackpoint:80,isteki:true,animation:"tuti-maho",use_mp:30},
@@ -213,10 +214,10 @@ function skill_hover(){
     this.button.classList.add('hover');
 
     
-    sellect_elem.parentNode.children[1].classList.remove('fadein');
+    sellect_elem.parentNode.children[1].classList.remove('move-down');
     sellect_elem.parentNode.children[1].classList.add('fadeout');
     sellect_elem.parentNode.children[1].style.display="none";
-    this.button.parentNode.children[1].classList.add('fadein');
+    this.button.parentNode.children[1].classList.add('move-down');
     this.button.parentNode.children[1].classList.remove('fadeout');
     this.button.parentNode.children[1].style.display="block";
     sellect_elem=this.button;
@@ -398,8 +399,8 @@ function fadechange(next_sellects){
     }
   }
   console.log(next_sellects);
-  if(select_hierarchy==="skills"&&skills.childElementCount>=sellect_elem){
-    skill()
+  if(select_hierarchy==="skills"&&skills.childElementCount>=sellection_numb){
+    skill();
   }
   switch(select_hierarchy){
     case "skills":
@@ -439,7 +440,7 @@ function fadechange(next_sellects){
 
 function skill(){
   skill_kazu=0;
-  skill_kazu+=Object.key(skill_param).length;
+  skill_kazu+=Object.keys(skill_param).length;
   use_skill=Math.floor(Math.random() * Math.floor(skill_kazu));
   
   buttle.addAttribute('animation-mixer',{clip: skill_param[animation]});
