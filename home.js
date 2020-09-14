@@ -8,6 +8,15 @@ const about_button=document.getElementById("about-button");
 var iframe = document.getElementById('id_ifrem');
 
 
+function sound(soundname)
+{
+  console.log(document.getElementById(soundname));
+	// [ID:sound-file]の音声ファイルを再生[play()]する
+	document.getElementById(soundname).play();
+}
+
+
+
 let ischanging=false;
 
 let selection_name="about-me";
@@ -35,10 +44,53 @@ document.addEventListener('keydown', (event) => {
     case "ArrowDown":
       selectByKey(sellection_numb+1);
       break;
+    case " ":
+      forward();
+      break;
+    case "ArrowRight":
+      forward();
+      break;
+    case "ArrowLeft":
+        back();
+        break;
+    case "w":
+      selectByKey(sellection_numb-1);
+      break;
+    case "s":
+      selectByKey(sellection_numb+1);
+      break;
     default:
+      console.log(keyName)
       break;
     }
 });
+
+function forward(){
+  switch(select_hierarchy){
+    case "action":
+      fadechange("action-next");
+      break;
+    case "skills":
+      fadechange("action");
+      break;
+    case "about":
+      fadechange("action");
+      break;
+    case "works":
+      fadechange("action");
+      break;
+  }
+}
+function back(){
+  switch(select_hierarchy){
+    case "action":
+      break;
+    case "skills":
+      fadechange("action");
+      break;
+  }
+}
+
 
 window.onload=()=>{
   console.log(iframe.contentWindow.document);
@@ -97,6 +149,7 @@ for(let i=0;i<action_buttons.childElementCount;i++){
 
 function action_hover(this_button) {
   if(ischanging===false){
+    sound("move")
     if(this.button===undefined){
       this.button=this_button;
     }
@@ -138,7 +191,8 @@ this_button.addEventListener("click",{next:"action",handleEvent:ischangefade},fa
 
 
 function skill_hover(){
-  if(ischanging===false){ 
+  if(ischanging===false){
+    sound("move"); 
     sellect_elem.classList.remove("hover");
     this.button.classList.add('hover');
 
@@ -232,6 +286,7 @@ function ischangefade(){
 
 
 function fadechange(next_sellects){
+  sound("select");
   sellect_elem.classList.remove("hover");
   if(sellect_elem.classList.contains("skill-button")){
     sellect_elem.parentNode.children[1].classList.remove('fadein');
@@ -246,7 +301,7 @@ function fadechange(next_sellects){
       next_sellects="skills"
     }
   }
-  console.log();
+  console.log(next_sellects);
   switch(select_hierarchy){
     case "skills":
       skills_fadeOut(sellection_numb);

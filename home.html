@@ -7,8 +7,20 @@
   <link rel="stylesheet" href="https://henoheTK.github.io/KITAMURA-Quest/home.css" />
 </head>
 <body>
-  <div class="scene">
-    <iframe src="https://henohetk.github.io/KITAMURA-Quest/buttle-scene.html"  class="buttle-scene" id="id_ifrem"></iframe>
+<audio id="BGM" preload="auto">
+	<source src="./ボスバトル！.mp3" type="audio/mp3">
+</audio>  
+<audio id="move" preload="auto">
+	<source src="./カーソル移動音.mp3" muted="muted" type="audio/mp3">
+</audio>  
+<audio id="select" preload="auto">
+	<source src="./アイテム入手音.mp3" muted="muted" type="audio/mp3">
+</audio>  
+<audio id="cancel" preload="auto">
+	<source src="./キャンセル音.mp3" muted="muted" type="audio/mp3">
+</audio>  
+<div class="scene">
+    <iframe src="http://localhost:8000/buttle"  class="buttle-scene" id="id_ifrem"></iframe>
   </div>
   <div class="skill-menue" id="skill-menue">
       <ul class="skill-buttons">
@@ -34,6 +46,9 @@
       </ul>
       <input type="submit" class="back-button" value="back" id="back-button"/>
     </div>
+  </div>
+  <div class="about-menue">
+    <input type="submit" class="back-button" value="back" id="back-button"/>
   </div>
   <div class="texts">
     <ul class="main-buttons" id="main-buttons">
