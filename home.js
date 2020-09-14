@@ -1,4 +1,3 @@
-const buttle_brame=document.getElementById("buttle-frame");
 const skills_button=document.getElementById("skills-button");
 const back_button=document.getElementById("back-button");
 const skills=document.getElementById("skill-menue");
@@ -6,6 +5,8 @@ const action_buttons=document.getElementById("main-buttons");
 const action_icons=document.getElementById("main-icons");
 const blender_button=document.getElementById("blender-button");
 const about_button=document.getElementById("about-button");
+var iframe = document.getElementById('id_ifrem');
+
 
 let ischanging=false;
 
@@ -39,6 +40,9 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+window.onload=()=>{
+  console.log(iframe.contentWindow.document);
+}
 
 function selectByKey(next_numb){
   switch(select_hierarchy){
@@ -262,3 +266,5 @@ function fadechange(next_sellects){
     ischanging=false;
   },500)
 }
+
+
