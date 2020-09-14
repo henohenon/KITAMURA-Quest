@@ -5,14 +5,26 @@ const action_buttons=document.getElementById("main-buttons");
 const action_icons=document.getElementById("main-icons");
 const blender_button=document.getElementById("blender-button");
 const about_button=document.getElementById("about-button");
+const about_menue=document.getElementById("about-menue");
 var iframe = document.getElementById('id_ifrem');
+let tekiHP=1000;
+let mikataHP=200;
+let mikataMP=100;
 
+const buttle=iframe.contentWindow.document.getElementById("sinden");
+
+const skill_param={
+    "daiti-attack":{attackpoint:80,isteki:true,animation:"tuti-maho",use_mp:30},
+    "heal":{ap:-80,isteki:false,animation:"kaihuku-maho",use_mp:20}
+}
+//"nomal_attack":70,
+  
 
 function sound(soundname)
 {
-  console.log(document.getElementById(soundname));
+  //console.log(document.getElementById(soundname));
 	// [ID:sound-file]の音声ファイルを再生[play()]する
-	document.getElementById(soundname).play();
+	//document.getElementById(soundname).play();
 }
 
 
@@ -26,6 +38,7 @@ let sellection_numb=0;
 
 const hierarchys={
   "about-button":[
+    "about-menue"
   ],
   "skills-button" :[
     "blender-button","unity-button","html-button"
@@ -91,11 +104,6 @@ function back(){
   }
 }
 
-
-window.onload=()=>{
-  console.log(iframe.contentWindow.document);
-}
-
 function selectByKey(next_numb){
   switch(select_hierarchy){
     case "action":{
@@ -137,6 +145,12 @@ function isCanselect(Numb,Max){
   }
   return Numb;
 }
+
+
+about_menue.children[3].addEventListener("mouseover", {button:about_menue.children[3],handleEvent:action_hover}, false);
+about_menue.children[3].addEventListener("click",{next:"action",handleEvent:ischangefade},false);
+
+
 
 
 let sellect_elem=about_button;
@@ -259,6 +273,26 @@ function skills_fadeIn(){
   sellect_elem.parentNode.children[0].classList.add('hover');
   sellect_elem.parentNode.children[1].style.display="block";
 }
+function abouts_fadeIn(){
+  about_menue.style.display="block"
+  about_menue.classList.remove('fadeout');
+  about_menue.classList.add('fadein');
+  console.log("ふぁらみ")
+
+  sellect_elem=about_menue.children[3];
+  sellection_numb=0;
+  select_hierarchy="about";
+  sellect_elem.classList.add('hover');
+}
+function abouts_fadeOut(){
+  about_menue.classList.remove('fadein');
+  about_menue.classList.add('fadeout');
+  console.log("むるみ")
+
+  setTimeout(function(){
+    about_menue.style.display="none"
+  },500);
+}
 
 
 //TODO... アニメーションからの消えるを実装
@@ -302,12 +336,18 @@ function fadechange(next_sellects){
     }
   }
   console.log(next_sellects);
+  if(select_hierarchy==="skills"&&skills.childElementCount>=sellect_elem){
+    skill()
+  }
   switch(select_hierarchy){
     case "skills":
       skills_fadeOut(sellection_numb);
       break;
-      case "action":
+    case "action":
       action_buttons_fadeOut(sellection_numb);
+      break;
+    case "about":
+      abouts_fadeOut(sellection_numb);
       break;
     }
   switch(next_sellects){
@@ -316,6 +356,8 @@ function fadechange(next_sellects){
       break;
     case "action":
       action_buttons_fadeIn();
+    case "about":
+      abouts_fadeIn();
   }
   setTimeout(function(){
     ischanging=false;
@@ -323,3 +365,23 @@ function fadechange(next_sellects){
 }
 
 
+function skill(){
+  skill_kazu=0;
+  skill_kazu+=Object.key(skill_param).length;
+  use_skill=Math.floor(Math.random() * Math.floor(skill_kazu));
+  
+  buttle.addAttribute('animation-mixer',{clip: skill_param[animation]});
+  setTimeout(function(){
+    tairyoku_change(use_skill[isteki],use_skill[attackpoint]);
+    setTimeout(function(){
+    },1000)
+  },1000)
+}
+
+function tairyoku_change(isteki,ap){
+  if(isteki){
+    tekiHP-(ap+ Math.floor( Math.random() * 20)-10);
+  }else{
+    tekiHP-(ap+ Math.floor( Math.random() * 20)-10);
+  }
+}

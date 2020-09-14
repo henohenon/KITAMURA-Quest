@@ -4,23 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://henoheTK.github.io/KITAMURA-Quest/home.css" />
+  <link rel="stylesheet" href="./home.css" />
 </head>
 <body>
 <audio id="BGM" preload="auto">
-	<source src="henoheTK.github.io/KITAMURA-Quest//ボスバトル！.mp3" type="audio/mp3">
+	<source src="" type="audio/mp3">
 </audio>  
 <audio id="move" preload="auto">
-	<source src="https://raw.githubusercontent.com/henoheTK/KITAMURA-Quest/master/%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB%E7%A7%BB%E5%8B%95%E9%9F%B3.mp3" muted="muted" type="audio/mp3">
+	<source src="" muted="muted" type="audio/mp3">
 </audio>  
 <audio id="select" preload="auto">
-	<source src="https://raw.githubusercontent.com/henoheTK/KITAMURA-Quest/master/システム決定音_2.mp3" muted="muted" type="audio/mp3">
+	<source src="" muted="muted" type="audio/mp3">
 </audio>  
 <audio id="cancel" preload="auto">
-	<source src="henoheTK.github.io/KITAMURA-Quest//キャンセル音.mp3" muted="muted" type="audio/mp3">
+	<source src="" muted="muted" type="audio/mp3">
 </audio>  
-<div class="scene">
-    <iframe src="http://https://henohetk.github.io/KITAMURA-Quest/buttle.html"  class="buttle-scene" id="id_ifrem"></iframe>
+  <div class="scene">
+    <iframe src="https://henohetk.github.io/KITAMURA-Quest/buttle.html"  class="buttle-scene" id="id_ifrem"></iframe>
+  </div>
+  <div class=hpmp>
+    <meter value=200 max="200" min="0" low="10000" class=teki-hp></meter>
+    <label>
+      <span>HP</span>
+      <meter value=200 max="200" min="0" low="50"></meter>
+    </label>
+    <label>
+      <span>MP</span>
+      <meter value=100 max="100" min="0" low="50"></meter>
+    </label>
   </div>
   <div class="skill-menue" id="skill-menue">
       <ul class="skill-buttons">
@@ -47,8 +58,39 @@
       <input type="submit" class="back-button" value="back" id="back-button"/>
     </div>
   </div>
-  <div class="about-menue">
-    <input type="submit" class="back-button" value="back" id="back-button"/>
+  <div class="about-menue"id=about-menue>
+    <h1 class="about-me">about me</h1>
+    <div class=status>
+      <h2 class=status-text>status</h2>
+      <label class=hp-label>
+        <span>HP</span>
+        <meter value=200 max="200" min="0" low="50" class="status-hp"></meter>
+        <span>200/200</span>
+      </label>
+      <br>
+      <label>
+        <span>MP</span>
+        <meter value=200 max="200" min="0" low="50"  class="status-mp"></meter>
+        <span>100/100</span>
+      </label>
+      <h3>状態</h3>
+      <ul>
+        <li>疲れ気味</li>
+        <li>開発依存症予備軍</li>
+        <li>ひまひま症候群</li>
+      </ul>  
+    </div>
+    <div class=syogo>
+      <h2 class=syogo-title>称号一覧</h2>
+      <ul class=syogo-text>
+        <li>n高等学校5期1年生</li>
+        <li>新米webプログラマー</li>
+        <li>ゲーム開発の亡者</li>
+        <li>センスがないモデラー</li>
+      </ul>
+    </div>
+    <input type="submit" class="about-back" value="back" id="back-button"/>
+    
   </div>
   <div class="texts">
     <ul class="main-buttons" id="main-buttons">
