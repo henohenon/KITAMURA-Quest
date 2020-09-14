@@ -4,32 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./home.css" />
 </head>
 <body>
-  <h1>いえい</h1>
-  <button id="workbutton">あるきたい</button>
-  <button id="attackbutton">あたぁっツク！！！！！</button>
-  <iframe id="buttle-frame" src="file:///Users/kitamuratakeru/vagrant/ubuntu64_18/workspace/portfolio-remaster/buttle-scene.html"></iframe>
-  <h2>置いてみる</h2>
-  <div>
-    <label class="popup-button">
-      <span>スキル</span>
-      <input type="checkbox" name="checkbox">
-    <div class="popup">
-      <div>
-        <label popup-button>
-          <span>blender</span>
-          <input type="checkbox" name="checkbox">
-        <div class="popup">
-          <h1>Blender</h1>
-          <h2>人を2週間ぐらいで作れるぐらいには成長</h1>
-          <br>
-          <h2>2~3年ぐらいやってる</h2>
-        </div>
-        </label>
-      </div>
-        </div>
-    </label>
+  <div class="scene">
+    <iframe class="buttle-scene" id="buttle-frame" src="file:///Users/kitamuratakeru/vagrant/ubuntu64_18/workspace/portfolio-remaster/buttle-scene.html"></iframe>
   </div>
+  <div class="skill-menue" id="skill-menue">
+      <ul class="skill-buttons">
+        <li  class="skill-li">
+          <input type="submit" value="Blender" class="skill-button" id="blender-button">
+          <div class="skill-popup">
+            <h2 id="bleder popup">2~3年ほどやっている</h2>
+            <h2 id="bleder popup">人を2週間弱ぐらいで作れるぐらいには成長</h2>
+          </div>
+        </li>
+       <li  class="skill-li">
+          <input type="submit" value="Unity" class="skill-button" id="unity-button">
+          <div class="skill-popup">
+            <h2 id="bleder popup">2~3年</h2>
+          </div>
+        </li>
+        <li  class="skill-li">
+          <input type="submit" value="HTML5" class="skill-button" id="html-button">
+          <div class="skill-popup">
+            <h2 id="bleder popup">2~3年</h2>
+          </div>
+        </li>
+      </ul>
+      <input type="submit" class="back-button" value="back" id="back-button"/>
+    </div>
+  </div>
+  <div class="texts">
+    <ul class="main-buttons" id="main-buttons">
+      <li>
+        <input type="submit" value="AboutMe" class="main-button hover" id="about-button">
+      </li>
+      <li>
+        <input type="submit" value="Skills" class="main-button" id="skills-button">
+      </li>
+      <li>
+        <input type="submit" value="Works" class="main-button" id="works-button">
+      </li>
+    </ul>
+    <ul class="main-icons" id="main-icons">
+      <li>
+        <a class="before-circle">A</a>
+      </li>
+      <li>
+        <a class="before-circle">S</a>
+      </li>
+      <li>
+        <a class="before-circle">W</a>
+      </li>
+    </ul>
+  <script src="file:///Users/kitamuratakeru/vagrant/ubuntu64_18/workspace/portfolio-remaster/home.js"></script>
 </body>
 </html>

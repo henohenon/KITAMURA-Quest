@@ -1,40 +1,214 @@
-/*popup表示させたいコンテンツのレイアウトと位置*/
-.popup{
-  width:100%;
-  height: 100%;
-  line-height:100px;
-  background:rgba(255, 255, 255, 0.568);
-  padding:0 4%;
-  box-sizing:border-box;
-  display:none;
-  position:fixed;
-  top:50%;
-  left:50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-.pop-text{
-  background-color: #01b6ed;
+@keyframes go-left {
+  100% {
+    transform: translate(-50px,25px);
+  }
+}
+@keyframes go-right {
+  100% {
+    transform: translate(-10px,25px);
+  }
+}
+@keyframes fadeOut-select
+{
+  0% {
+    opacity: 1;
+  }
+  30%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 0;
+  
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-/*ボタンの装飾*/
-label span{
-  display:block;
-  background-color:#01b6ed;
-  color:#fff;
-  width:200px;
-  line-height:40px;
-  border-radius:4px;
-  text-align:center;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-label span:hover{
-  cursor:pointer;
+
+
+html, body {
+  height:100%;
+  margin: 0;
 }
-input[type="checkbox"]{
-  display:none;
+
+
+
+.main-buttons{
+  position: absolute;
 }
-/*checkboxがcheckの状態になったらpopupを表示させる*/
-input[type="checkbox"]:checked + .popup{
-  display:block;
+
+.main-button{
+  outline: none;
+  transform     : translate(0px,30px);
+  font-size     : 30pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 0px 0px;   /* 余白       */
+  margin        : 10px 0px;
+  width         : 300px;
+  background    : #ffffff;     /* 背景色     */
+  color         : #545454;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : 0.3s;         /* なめらか変化 */
+  box-shadow    : 5px 5px #8a8a8a;  /* 影の設定 */
+  border        : 5px solid #a6f2ff;    /* 枠の指定 */
+  border-radius :25px;
+}
+
+.before-circle{	
+  position      : relative;
+  display       : block;
+  width         : 60px;
+  height        : 60px;
+  border-radius : 50%;
+  text-align    : center;
+  line-height   : 60px;
+  background    : #ffffff;
+  box-shadow    : 5px 5px #8a8a8a;  /* 影の設定 */
+  border        : 5px solid #a6f2ff;    /* 枠の指定 */
+  color         : #545454;     /* 文字色     */
+  font-size     : 35pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+}
+.skill-text{
+  background-color: chocolate;
+  opacity: 0;
+  margin-left: 20px;
+  width: 10%;
+  text-align:"center";
+}
+
+
+
+ul{
+  list-style    : none;
+  padding-left  : 3%;
+}
+
+
+
+
+
+
+
+
+
+
+.scene {
+  text-align: right;
+  height: 100%;
+  padding: 0;
+}
+.buttle-scene {
+  width: 100%;
+  height: 100%;
+  border:none;
+  position: relative;z-index: -99;
+}
+.skill-buttons{
+  position: absolute;
+  border-radius: 5px;
+  padding: 0.5em 1em 0.5em 2.3em;
+}
+
+
+.skill-button{
+  position: absolute;
+  color: #404040;
+  border: none;
+  border-left: solid 20px #1fa67a;/*左側の線*/
+  background: whitesmoke;
+  margin-bottom: 10px;/*下のバーとの余白*/
+  line-height: 1;
+  padding: 0.5em;
+  width: 500px;
+  transition    : 0.3s;         /* なめらか変化 */
+  box-shadow    : 5px 5px #8a8a8a;  /* 影の設定 */
+  outline: none;
+  height: 100px;
+  padding-left: 30%;
+  padding-top: 0%;
+  font-size: 500%;
+  position: relative;
+  text-align: start;
+}
+
+.skill-menue{
+  display: none;
+  position: absolute;
+  transform: translate(0px,-800px);
+}
+
+.skill-popup{
+  display: none;
+  position: relative;
+}
+.back-button{
+  transform: translate(470px,350px);
+  background-color: rgb(104, 104, 104);
+  opacity: 0.8;
+  outline: none;
+  color:#ffffff;
+  padding: 10px 20px;
+}
+
+
+
+.texts{
+  transform: translateY(-800px);
+}
+.main-icons{
+  position: absolute;
+  transform: translate(-10px,25px);
+}
+
+
+
+
+.fadeout {
+  animation : fadeOut 0.5s;
+  animation-fill-mode: both;
+}
+.fadeout-select {
+  animation : fadeOut-select 0.5s;
+  animation-fill-mode: both;
+}
+.fadein {
+  animation : fadeIn 0.5s;
+  animation-fill-mode: both;
+}
+.go-left{
+  animation : go-left 1s;
+  animation-fill-mode: both;
+}
+.go-right{
+  animation : go-right 1s;
+  animation-fill-mode: both;
+}
+
+
+.hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  border        : 5px solid #ffa052;    /* 枠の指定 */
 }
 
